@@ -3,7 +3,7 @@ import React from "react";
 import { TopNav } from '../components/TopNav';
 import { Menu } from '../components/Menu';
 import '../styles/globals.css';
-import logo from '../img/logo.png'
+
 
 
 export default function App() {
@@ -35,10 +35,10 @@ export default function App() {
               <button style={{width:"30%", height:"6vh", color:"black", cursor:"pointer", marginLeft:"5%"}} >Boton 2</button>
             </div>
           </div>
-          <div style={{ textAlign: "center", display: "flex", flexWrap: "wrap", backgroundColor: "#2d364e", borderRadius: "50%" }} >
+          <div style={{ textAlign: "center", display: "flex", flexWrap: "wrap", backgroundColor: "#2d364e", borderRadius: "50%", height:"500px" }} >
             <img
               style={{ width: "500px", margin:"0" }}
-              src={logo} alt="Aqui va una imagen" />
+              src={"logo.png"} alt="Aqui va una imagen" />
           </div>
         </div>
 
