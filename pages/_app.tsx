@@ -1,7 +1,8 @@
 import React from "react";
+// import fs from 'fs';
 import { TopNav } from '../components/TopNav';
 import { Menu } from '../components/Menu';
-import '../styles/App.css';
+import '../styles/globals.css';
 import logo from '../img/logo.png'
 
 
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <div>
       <header>
-        <TopNav callback={menuClick()} ></TopNav>
+        <TopNav callback={menuClick} ></TopNav>
       </header>
       <Menu items={[]} show={false}></Menu>
       <div>
@@ -27,7 +28,10 @@ export default function App() {
             </div>
             <br /><br />
             <div style={{display:"flex", justifyContent:"flex-start"}} >
-              <button style={{width:"30%", height:"6vh", fontSize:"20px", cursor:"pointer", marginLeft:"5%", backgroundColor:"#54c58a", borderRadius:"5px"}} >Download</button>
+              <button style={{width:"30%", height:"6vh", fontSize:"20px", cursor:"pointer", marginLeft:"5%", backgroundColor:"#54c58a", borderRadius:"5px"}} 
+                onClick={()=>{console.log();
+                }}
+              >Download</button>
               <button style={{width:"30%", height:"6vh", color:"black", cursor:"pointer", marginLeft:"5%"}} >Boton 2</button>
             </div>
           </div>

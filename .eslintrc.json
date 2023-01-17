@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "eslint:recommended"
+  ]
+}
