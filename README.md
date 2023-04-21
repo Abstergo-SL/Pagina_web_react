@@ -1,75 +1,34 @@
-# React Quickstart ⚛️ 📦
-> Starter template for a React app - including docs, CI, and hosting
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[![GH Pages Deploy](https://github.com/MichaelCurrin/react-quickstart/workflows/GH%20Pages%20Deploy/badge.svg)](https://github.com/MichaelCurrin/react-quickstart/actions?query=workflow:"GH+Pages+Deploy")
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/react-quickstart)](https://github.com/MichaelCurrin/react-quickstart/tags/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license "Go to License section")
+## Getting Started
 
-[![Made with Node](https://img.shields.io/badge/Node.js->=10-blue?logo=node.js&logoColor=white)](https://nodejs.org)
-[![Made with Yarn](https://img.shields.io/badge/Yarn->=1-blue?logo=yarn&logoColor=white)](https://classic.yarnpkg.com)
-[![Made with React](https://img.shields.io/github/package-json/dependency-version/MichaelCurrin/react-quickstart/react?logo=react)](https://www.npmjs.com/package/react)
+First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-<div align="center">
-    <a href="https://michaelcurrin.github.io/react-quickstart/" title="Go to demo app">
-        <img src="https://raw.githubusercontent.com/github/explore/master/topics/react/react.png"
-            alt="node icon"
-            title="Node.js"
-            width="80" height="80" />
-        <img src="https://raw.githubusercontent.com/github/explore/master/topics/nodejs/nodejs.png"
-            alt="node icon"
-            title="Node.js"
-            width="80" height="80" />
-    </a>
-</div>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-## Preview
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-<div align="center">
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-<a href="https://michaelcurrin.github.io/react-quickstart/">
-    <img src="/sample.png" alt="Sample screenshot of React site" title="Go to demo site" width="500" />
-</a>
+## Learn More
 
-<br/>
-<br/>
+To learn more about Next.js, take a look at the following resources:
 
-[![View demo - React Quickstart](https://img.shields.io/badge/View_demo-React_App_Quickstart-blue?style=for-the-badge)](https://michaelcurrin.github.io/react-quickstart/)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-</div>
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-## Create a new React app
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Use this project as a template:
-
-<div align="center">
-
-[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/react-quickstart/generate "Use this template")
-
-</div>
-
-If you need something more minimal, see this [Minimal](https://michaelcurrin.github.io/code-cookbook/recipes/javascript/packages/react/minimal.html) app recipe.
-
-
-## Documentation
-
-To install, run and deploy the app, see this project's docs:
-
-<div align="center">
-
-[![Docs](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/README.md "Go to project docs")
-
-</div>
-
-To learn how to use this project and see how a React project works, see the [Template notes](/docs/template-notes/) section of the docs.
-
-
-## License
-
-Released under [MIT](/LICENSE) by [@MichaelCurrin](https://github.com/MichaelCurrin).
-
-<!-- TODO remove this line when creating a project from this template -->
-
-This project is based on the template from the React CLI. I have added my own docs, the deploy flow, made minor changes to the app, plus some additions to components.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

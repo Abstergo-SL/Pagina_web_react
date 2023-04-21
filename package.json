@@ -1,48 +1,46 @@
 {
-  "name": "react-quickstart",
-  "version": "1.4.0",
+  "name": "abstergo-page",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "fmt:check": "npx prettier --single-quote -c src",
-    "fmt:fix": "npx prettier --single-quote -w src",
-    "test": "react-scripts test",
-    "test:all": "react-scripts test --watchAll=false",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "preversion": "git fetch --tags && yarn test-all",
-    "version": "yarn build",
-    "postversion": "git push --follow-tags"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3",
-    "web-vitals": "^1.1.1"
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/lab": "^5.0.0-alpha.110",
+    "@mui/material": "^5.10.15",
+    "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/auth-ui-react": "^0.2.6",
+    "@supabase/supabase-js": "^2.1.0",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "aws-amplify": "^5.0.6",
+    "eslint-config-next": "13.0.3",
+    "fs": "^0.0.1-security",
+    "list-files": "^1.1.4",
+    "list-react-files": "^0.2.0",
+    "next": "13.0.3",
+    "node-xlsx": "^0.21.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.4.3",
+    "swr": "^1.3.0",
+    "typescript": "4.9.3"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/react": "^18.0.26"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "author": "MichaelCurrin",
-  "license": "MIT",
-  "homepage": "https://michaelcurrin.github.io/react-quickstart/"
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
 }
