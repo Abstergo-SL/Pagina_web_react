@@ -16,22 +16,27 @@ import CameraIcon from '@mui/icons-material/Camera';
 const pages = ['Download', 'About us'];
 const settings = ['Account', 'Dashboard', 'Logout'];
 
-export function ResponsiveAppBar() {
+export function ResponsiveAppBar(props:any) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log("handleOpenNavMenu");
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log("handleOpenUserMenu");
     setAnchorElUser(event.currentTarget);
   };
+  
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (e: React.MouseEvent<HTMLElement>) => {
+    props.datacallback(e.currentTarget.innerText);
     setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
+    console.log("handleCloseUserMenu");
     setAnchorElUser(null);
   };
 
