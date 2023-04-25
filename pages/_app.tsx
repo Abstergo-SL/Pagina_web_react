@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="container" style={{ padding: '50px 0 100px 0', backgroundColor: theme.palette.background.default }}>
       <ResponsiveAppBar datacallback={datacallback}/>
-        <Component {...pageProps} currPage={currPage}/>
+        <Component {...pageProps} currPage={currPage} theme={theme}/>
     </div>
   );
 }

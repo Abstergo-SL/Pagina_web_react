@@ -8,6 +8,10 @@ body {
   overflow:auto;
 }
 
+.bg{
+  background-color: black;
+}
+
 a {
   color: inherit;
   text-decoration: none;

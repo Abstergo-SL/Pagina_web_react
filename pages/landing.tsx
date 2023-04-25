@@ -4,6 +4,8 @@ import Paper from "@mui/material/Paper";
 import { darkTheme, lightTheme } from "../utils/Theme";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import a from "public/553150.jpg";
+import main from "./main";
 
 function Landing() {
   const [theme, setTheme] = React.useState<any>(lightTheme);
@@ -44,13 +46,15 @@ function Landing() {
           flexWrap: "wrap",
           justifyContent: "center",
           "& > :not(style)": {
-            m: 1,
-            width: mainBoxWidth,
-            height: mainBoxHeight,
+            m: 0,
+            width: mainBoxWidth*1.5,
+            height: mainBoxHeight*1.3,
+            backgroundImage: 'url('+a.src+')',
+            backgroundSize: 'contain'
           },
         }}
       >
-        <Paper
+        <Paper 
           sx={{ backgroundColor: theme.palette.background.paper }}
           elevation={5}
         >
