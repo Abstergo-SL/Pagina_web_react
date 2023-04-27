@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import a from "public/553150.jpg";
 import main from "./main";
+import { borderRadius, width } from "@mui/system";
 
 function Landing() {
   const [theme, setTheme] = React.useState<any>(lightTheme);
@@ -47,27 +48,47 @@ function Landing() {
           justifyContent: "center",
           "& > :not(style)": {
             m: 0,
-            width: mainBoxWidth*1.5,
-            height: mainBoxHeight*1.3,
-            backgroundImage: 'url('+a.src+')',
-            backgroundSize: 'contain'
+            width: mainBoxWidth * 1.5,
+            height: mainBoxHeight,
+            backgroundImage: "url(" + a.src + ")",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           },
         }}
       >
-        <Paper 
-          sx={{ backgroundColor: theme.palette.background.paper }}
-          elevation={5}
-        >
-          <Typography
-            variant="h1"
-            gutterBottom
-            color={theme.palette.primary.contrastText}
-          >
-            Heading
-          </Typography>
-        </Paper>
+        <div
+          style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems:"center"
+            }}>
+          <Paper
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            backgroundColor: "rgba(162, 167, 199, 0.51)",
+            borderRadius: "12px",
+            width:"40%"
+          }}>
+            <Typography
+              variant="h2"
+              align="center"
+              sx={{
+                verticalAlign: "center",
+                display:"flex"
+              }}
+              gutterBottom
+              color= "black"
+            >
+              Comienza tu Aventura
+            </Typography>
+            </Paper>
+        </div>
       </Box>
-      <br /><br />
+      <br />
+      <br />
       <Box
         sx={{
           display: "flex",
@@ -75,7 +96,7 @@ function Landing() {
           justifyContent: "center",
           "& > :not(style)": {
             m: 1,
-            width: mainBoxWidth*1.3,
+            width: mainBoxWidth,
             height: mainBoxHeight,
           },
         }}
@@ -93,14 +114,14 @@ function Landing() {
             Movidas
           </Typography>
           <Grid item xs={12}>
-            <Grid container justifyContent="center" spacing={15}>
-              {[0, 1, 2].map((value) => (
+            <Grid container justifyContent="center" spacing={35}>
+              {[0, 1].map((value) => (
                 <Grid key={value} item>
                   <Paper
                     sx={{
                       height: mainBoxHeight / 1.5,
                       width: mainBoxWidth / 4,
-                      backgroundColor: theme.palette.secondary.main
+                      backgroundColor: theme.palette.secondary.main,
                     }}
                   />
                 </Grid>
