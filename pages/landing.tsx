@@ -4,14 +4,17 @@ import Paper from "@mui/material/Paper";
 import { darkTheme, lightTheme } from "../utils/Theme";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import a from "public/553150.jpg";
+import bg from "public/553150.jpg";
 import main from "./main";
 import { borderRadius, width } from "@mui/system";
+import { Card1, Card2 } from "../components/Cards";
+import { Button } from "@mui/material";
 
 function Landing() {
   const [theme, setTheme] = React.useState<any>(lightTheme);
   const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
   const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);
+
 
   React.useEffect(() => {
     document.body.classList?.remove("loading");
@@ -49,8 +52,8 @@ function Landing() {
           "& > :not(style)": {
             m: 0,
             width: mainBoxWidth * 1.5,
-            height: mainBoxHeight,
-            backgroundImage: "url(" + a.src + ")",
+            height: mainBoxHeight ,
+            backgroundImage: "url(" + bg.src + ")",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           },
@@ -58,37 +61,55 @@ function Landing() {
       >
         <div
           style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems:"center"
-            }}>
-          <Paper
-          style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            backgroundColor: "rgba(162, 167, 199, 0.51)",
-            borderRadius: "12px",
-            width:"40%"
+            alignItems: "center"
           }}>
-            <Typography
-              variant="h2"
-              align="center"
-              sx={{
-                verticalAlign: "center",
-                display:"flex"
-              }}
-              gutterBottom
-              color= "black"
-            >
-              Comienza tu Aventura
-            </Typography>
-            </Paper>
+            <Button variant="contained" href="/dowload">
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
+                <Typography
+                variant="h2"
+                align="center"
+                style={{
+                  alignSelf: "center"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                ¡Comienza tu Aventura!
+              </Typography>
+              <Typography
+                variant="h5"
+                align="center"
+                style={{
+                  alignSelf: "center"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                Descargalo y juega ya mismo
+              </Typography>
+              </div>
+            </Button>
         </div>
       </Box>
-      <br />
-      <br />
+      <br/>
+      <br/>
       <Box
         sx={{
           display: "flex",
@@ -97,7 +118,7 @@ function Landing() {
           "& > :not(style)": {
             m: 1,
             width: mainBoxWidth,
-            height: mainBoxHeight,
+            height: mainBoxHeight * 0.8,
           },
         }}
       >
@@ -106,24 +127,34 @@ function Landing() {
           elevation={1}
         >
           <Typography
-            variant="h1"
+            variant="h2"
             gutterBottom
             align="center"
             color={theme.palette.primary.contrastText}
+            style={{ 
+              margin: "45px",
+              color: "black" 
+            }}
           >
-            Movidas
+            Un mundo de Posibilidades
           </Typography>
           <Grid item xs={12}>
-            <Grid container justifyContent="center" spacing={35}>
-              {[0, 1].map((value) => (
-                <Grid key={value} item>
+            <Grid container justifyContent="center" spacing={25}>
+              {[Card1(), Card2()].map((value) => (
+                <Grid item>
                   <Paper
                     sx={{
-                      height: mainBoxHeight / 1.5,
-                      width: mainBoxWidth / 4,
+                      height: mainBoxHeight / 1.5 * 0.8,
+                      width: mainBoxWidth /3.75 ,
                       backgroundColor: theme.palette.secondary.main,
+                    }} 
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-around",
+                      alignItems: "center"
                     }}
-                  />
+                  >{value}</Paper>
                 </Grid>
               ))}
             </Grid>
