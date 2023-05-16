@@ -9,6 +9,7 @@ import main from "./main";
 import { borderRadius, width } from "@mui/system";
 import { Card1, Card2 } from "../components/Cards";
 import { Button } from "@mui/material";
+import Footer from "../components/Footer";
 
 function Landing() {
   const [theme, setTheme] = React.useState<any>(lightTheme);
@@ -38,8 +39,8 @@ function Landing() {
   return (
     <div
       style={{
-        paddingTop: "25px",
-        paddingBottom: "0",
+        paddingTop: "20px",
+        paddingBottom: "0px",
         paddingRight: "0px",
         paddingLeft: "0px",
       }}
@@ -102,7 +103,7 @@ function Landing() {
                 gutterBottom
                 color="black"
               >
-                Descargalo y juega ya mismo
+                Descargalo y juega ya
               </Typography>
               </div>
             </Button>
@@ -136,7 +137,7 @@ function Landing() {
               color: "black" 
             }}
           >
-            Un mundo de Posibilidades
+            Un Mundo de Posibilidades
           </Typography>
           <Grid item xs={12}>
             <Grid container justifyContent="center" spacing={25}>
@@ -161,7 +162,9 @@ function Landing() {
           </Grid>
         </Paper>
       </Box>
-    </div>
+      <br /><br /><br />
+      <Footer></Footer>
+    </div>  
   );
 }
 

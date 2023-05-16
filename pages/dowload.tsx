@@ -1,6 +1,8 @@
 import * as React from "react";
 import { darkTheme, lightTheme } from '../utils/Theme';
-import { Box, Paper, Typography, Card, Grid } from "@mui/material";
+import { Box, Paper, Typography, Card, Grid, Button } from "@mui/material";
+import bg from "public/553150.jpg";
+import Footer from "../components/Footer";
 
 
 function download() {
@@ -27,48 +29,129 @@ function download() {
 
   
   return (
-    <div>
-      <br /><br />
+    <div
+      style={{
+        paddingTop: "0px",
+        paddingBottom: "0px",
+        paddingRight: "0px",
+        paddingLeft: "0px",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           "& > :not(style)": {
-            m: 1,
-            width: mainBoxWidth * 10,
-            height: mainBoxHeight,
+            m: 0,
+            width: mainBoxWidth * 1.5,
+            height: mainBoxHeight *1.3,
+            backgroundImage: "url(" + bg.src + ")",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           },
         }}
       >
-        <Paper
-          sx={{ backgroundColor: theme.palette.background.paper }}
-          elevation={5}
-        >
-          <Typography
-            variant="h1"
-            gutterBottom
-            color={theme.palette.primary.contrastText}
-          >
-            Download
-          </Typography>
-          <Grid container justifyContent="center" spacing={2}>
-            {[0, 1].map((value) => (
-              <Grid key={value} item>
-                <Paper
-                  sx={{
-                    height: mainBoxHeight / 1.3,
-                    width: mainBoxWidth / 2.2,
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-                  }}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Paper>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
+            <Paper 
+            sx={{ backgroundColor: theme.palette.background.paper }}
+          elevation={1}>
+
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
+                <Typography
+                variant="h2"
+                align="center"
+                style={{
+                  alignSelf: "center",
+                  marginLeft:"40px",
+                  marginRight:"40px"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                ¡Juega Ahora!
+              </Typography>
+              <Typography
+                variant="h5"
+                align="center"
+                style={{
+                  alignSelf: "center"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                Descargarlo Gratis
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{
+                  alignSelf: "center"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                Version 1.0.5
+              </Typography>
+              </div>
+
+              <br /><br />
+              
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center", 
+                marginBottom: "5%"
+              }}>
+              <Button variant="contained">
+                <Typography
+                variant="h6"
+                align="center"
+                style={{
+                  alignSelf: "center"
+                }}
+                sx={{
+                  verticalAlign: "center",
+                  display: "flex",
+                }}
+                gutterBottom
+                color="black"
+              >
+                Windows x64
+              </Typography>
+            </Button>
+            </div>
+            </Paper>
+        </div>
       </Box>
-    </div>
+      <Footer></Footer>
+    </div>  
   )
 }
 

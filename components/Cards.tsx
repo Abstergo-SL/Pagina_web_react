@@ -15,9 +15,14 @@ export function Card1() {
                 backgroundImage: "url(" + f_cam.src + ")",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
+                backgroundPosition:"center"
             }}></div>
 
-            <p>Completa misiones, enfrentate a terribles enemigos y descubre los secretos que se esconden por nuestro universo</p>
+            <p style={{
+                textAlign:"center",
+                marginLeft:"1%",
+                marginRight:"1%"
+            }}>Completa misiones, enfrentate a terribles enemigos y descubre los secretos que se esconden por nuestro universo</p>
         </>
     )
 }
@@ -34,9 +39,14 @@ export function Card2() {
                 backgroundImage: "url(" + f_sur.src + ")",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
+                backgroundPosition:"center"
             }}></div>
 
-            <p>El modo de supervivencia clásico. Aguanta oleadas de enemigos y mejora tu puntuación o estadísticas.</p>
+            <p style={{
+                textAlign:"center",
+                marginLeft:"1%",
+                marginRight:"1%"
+            }}>El modo de supervivencia clásico. Aguanta oleadas de enemigos y mejora tu puntuación o estadísticas.</p>
         </>
     )
 }
