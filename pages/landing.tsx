@@ -11,7 +11,7 @@ import { Card1, Card2 } from "../components/Cards";
 import { Button } from "@mui/material";
 import Footer from "../components/Footer";
 
-function Landing() {
+function Landing(props:any) {
   const [theme, setTheme] = React.useState<any>(lightTheme);
   const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
   const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);
@@ -67,7 +67,7 @@ function Landing() {
             justifyContent: "center",
             alignItems: "center"
           }}>
-            <Button variant="contained" href="/dowload">
+            <Button variant="contained" onClick={()=>{props.changePage("DOWNLOAD")}}>
               <div
               style={{
                 display: "flex",

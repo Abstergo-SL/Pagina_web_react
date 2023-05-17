@@ -5,7 +5,7 @@ import bg from "public/553150.jpg";
 import Footer from "../components/Footer";
 
 
-function download() {
+function download(props:any) {
   const [theme, setTheme] = React.useState<any>(lightTheme);
   const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
   const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);

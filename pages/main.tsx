@@ -7,13 +7,19 @@ import { theme } from '../interfaces/theme'
 
 
 export function main(props:any) {
+    
     const theme:theme = props.theme;
+
+
+    const callback = (Name:string) => {
+        props.callback(Name)
+    }
 
     return(
         <div style={{ backgroundColor: theme.palette.background.default }}>
-            {props.currPage == "landing" ? <Landing></Landing>
-              : props.currPage == "DOWNLOAD" ? <Download></Download>
-                :  <AboutUs></AboutUs>}
+            {props.currPage == "landing" ? <Landing changePage={callback}></Landing>
+              : props.currPage == "DOWNLOAD" ? <Download changePage={callback}></Download>
+                :  <AboutUs changePage={callback}></AboutUs>}
         </div>
     )
 }

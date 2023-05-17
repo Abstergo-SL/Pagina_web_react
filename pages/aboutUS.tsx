@@ -5,7 +5,7 @@ import { Box, Button, Typography, Paper, Grid, ButtonGroup } from "@mui/material
 import { Card1, Card2 } from "../components/Cards";
 import bg from "public/553150.jpg";
 
-function AboutUs() {
+function AboutUs(props:any) {
     const [theme, setTheme] = React.useState<any>(lightTheme);
     const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
     const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);
