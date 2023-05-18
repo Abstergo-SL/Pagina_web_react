@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CameraIcon from '@mui/icons-material/Camera';
 
 const pages = ['Download', 'About us'];
-const settings = ['Account', 'Dashboard', 'Logout'];
+const settings = ['Account', 'Logout'];
 
 export function ResponsiveAppBar(props:any) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -35,8 +35,16 @@ export function ResponsiveAppBar(props:any) {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    console.log("handleCloseUserMenu");
+  const ProfileButtonClick = (e : React.MouseEvent<HTMLElement>) => {
+    switch (e.currentTarget.innerText) {
+      case "Account":
+        window.location.href = "/perfil";
+      break;
+
+      case "Logout":
+        
+      break;
+    }
     setAnchorElUser(null);
   };
 
@@ -156,10 +164,10 @@ export function ResponsiveAppBar(props:any) {
                 horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={ProfileButtonClick}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={ProfileButtonClick}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
