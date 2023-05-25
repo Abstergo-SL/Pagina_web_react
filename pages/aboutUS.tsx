@@ -3,9 +3,10 @@ import Footer from "../components/Footer";
 import { darkTheme, lightTheme } from '../utils/Theme';
 import { Box, Button, Typography, Paper, Grid, ButtonGroup } from "@mui/material";
 import { Card1, Card2 } from "../components/Cards";
-import bg from "public/553150.jpg";
+import bg from "public/bg_aboutUs.jpg";
+import bg_aux from "public/bg_aux.jpg";
 
-function AboutUs(props:any) {
+function AboutUs(props: any) {
     const [theme, setTheme] = React.useState<any>(lightTheme);
     const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
     const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);
@@ -62,7 +63,7 @@ function AboutUs(props:any) {
                         alignItems: "center"
                     }}>
                     <Paper
-                        sx={{ backgroundColor: theme.palette.background.paper }}
+                        sx={{ backgroundColor: "#bed0e6" }}
                         elevation={1}>
                         <div>
                             <Typography
@@ -86,83 +87,99 @@ function AboutUs(props:any) {
                     </Paper>
                 </div>
             </Box>
-            <br />
-            <br />
+
             <Box
                 sx={{
                     display: "flex",
                     flexWrap: "wrap",
                     justifyContent: "center",
                     "& > :not(style)": {
-                        m: 1,
-                        width: mainBoxWidth * 1.3,
-                        height: mainBoxHeight / 1.5,
+                        m: 0,
+                        width: mainBoxWidth * 1.5,
+                        height: mainBoxHeight,
+                        backgroundImage: "url(" + bg_aux.src + ")",
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
                     },
-                }}
-            >
-                <Paper
-                    sx={{ backgroundColor: theme.palette.background.paper }}
-                    elevation={1}
+                }}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        "& > :not(style)": {
+                            m: 1,
+                            width: mainBoxWidth * 1.3,
+                            height: mainBoxHeight / 1.4,
+                            marginTop: mainBoxWidth/100,    
+                        },
+                    }}
                 >
-                    <Typography
-                        variant="h4"
-                        gutterBottom
-                        align="center"
-                        color={theme.palette.primary.contrastText}
-                        style={{
-                            marginTop: "40px",
-                            color: "black"
-                        }}
+                    <Paper
+                        sx={{ backgroundColor: "#bed0e6" }}
+                        elevation={1}
                     >
-                        ¿Qué es Abstergo?
-                    </Typography>
-                    <br />
-                    <Typography
-                        variant="body1"
-                        align="left"
-                        style={{
-                            marginLeft: "2%",
-                            marginRight: "2%"
-                        }}
-                        sx={{
-                            verticalAlign: "center",
-                            display: "flex",
-                        }}
-                        gutterBottom
-                        color="black"
-                    >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, expedita architecto aliquam impedit rerum ex aspernatur animi, voluptatem eaque dignissimos obcaecati velit placeat minus in eius nesciunt nostrum tempora est.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum quasi adipisci est illum libero in a, officiis, corrupti qui soluta optio officia consequuntur laboriosam animi quas ea esse inventore!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quaerat quasi recusandae placeat quos id excepturi sunt ipsum suscipit soluta optio iusto, eveniet earum! Doloremque odit quos molestiae a necessitatibus!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sapiente saepe quod debitis eaque unde ut commodi illo quisquam, eligendi, ratione illum? Nulla veniam repudiandae, esse debitis vero quidem ullam?
-                    </Typography>
-                    <br />
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                            alignItems: "center"
-                        }}>
                         <Typography
-                            variant="body2"
+                            variant="h4"
                             gutterBottom
                             align="center"
                             color={theme.palette.primary.contrastText}
                             style={{
-                                marginTop: "30px",
+                                marginTop: "40px",
                                 color: "black"
-                            }}>
-                            ¿Aún no eres parte de Abstergo? ¡Únete!
+                            }}
+                        >
+                            ¿Qué es Abstergo?
                         </Typography>
-                        <ButtonGroup size="large" aria-label="large button group">
-                            <Button>Inicia Sesión</Button>
-                            <Button>Regístrate</Button>
-                        </ButtonGroup>
-                    </div>
-                </Paper>
+                        <br />
+                        <Typography
+                            variant="body1"
+                            align="left"
+                            style={{
+                                marginLeft: "2%",
+                                marginRight: "2%"
+                            }}
+                            sx={{
+                                verticalAlign: "center",
+                                display: "flex",
+                            }}
+                            gutterBottom
+                            color="black"
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit sed temporibus iusto accusantium expedita rerum quam, illo praesentium aliquid, odio voluptatum hic sequi harum repellat aspernatur eligendi corporis! Quos!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, expedita architecto aliquam impedit rerum ex aspernatur animi, voluptatem eaque dignissimos obcaecati velit placeat minus in eius nesciunt nostrum tempora est.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum quasi adipisci est illum libero in a, officiis, corrupti qui soluta optio officia consequuntur laboriosam animi quas ea esse inventore!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quaerat quasi recusandae placeat quos id excepturi sunt ipsum suscipit soluta optio iusto, eveniet earum! Doloremque odit quos molestiae a necessitatibus!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sapiente saepe quod debitis eaque unde ut commodi illo quisquam, eligendi, ratione illum? Nulla veniam repudiandae, esse debitis vero quidem ullam?
+                        </Typography>
+                        <br />
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
+                            <Typography
+                                variant="body2"
+                                gutterBottom
+                                align="center"
+                                color={theme.palette.primary.contrastText}
+                                style={{
+                                    marginTop: "30px",
+                                    color: "black"
+                                }}>
+                                ¿Aún no eres parte de Abstergo? ¡Únete!
+                            </Typography>
+                            <ButtonGroup size="large" aria-label="large button group">
+                                <Button>Inicia Sesión</Button>
+                                <Button>Regístrate</Button>
+                            </ButtonGroup>
+                        </div>
+                    </Paper>
+                </Box>
             </Box>
-            <br /><br /><br />
+            
             <Footer></Footer>
         </div >
     )

@@ -4,14 +4,15 @@ import Paper from "@mui/material/Paper";
 import { darkTheme, lightTheme } from "../utils/Theme";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import bg from "public/553150.jpg";
+import bg from "public/bg_landing.jpg";
+import bg_aux from "public/bg_aux.jpg";
 import main from "./main";
 import { borderRadius, width } from "@mui/system";
 import { Card1, Card2 } from "../components/Cards";
 import { Button } from "@mui/material";
 import Footer from "../components/Footer";
 
-function Landing(props:any) {
+function Landing(props: any) {
   const [theme, setTheme] = React.useState<any>(lightTheme);
   const [mainBoxWidth, SetMainBoxWidth] = React.useState(100);
   const [mainBoxHeight, SetMainBoxHeight] = React.useState(100);
@@ -53,7 +54,7 @@ function Landing(props:any) {
           "& > :not(style)": {
             m: 0,
             width: mainBoxWidth * 1.5,
-            height: mainBoxHeight ,
+            height: mainBoxHeight,
             backgroundImage: "url(" + bg.src + ")",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -67,15 +68,15 @@ function Landing(props:any) {
             justifyContent: "center",
             alignItems: "center"
           }}>
-            <Button variant="contained" onClick={()=>{props.changePage("DOWNLOAD")}}>
-              <div
+          <Button sx={{backgroundColor: "#4997f2"}} variant="contained" onClick={() => { props.changePage("DOWNLOAD") }}>
+            <div
               style={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center"
               }}>
-                <Typography
+              <Typography
                 variant="h2"
                 align="center"
                 style={{
@@ -105,66 +106,82 @@ function Landing(props:any) {
               >
                 Descargalo y juega ya
               </Typography>
-              </div>
-            </Button>
+            </div>
+          </Button>
         </div>
       </Box>
-      <br/>
-      <br/>
+
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
           "& > :not(style)": {
-            m: 1,
-            width: mainBoxWidth,
-            height: mainBoxHeight * 0.8,
+            m: 0,
+            width: mainBoxWidth * 1.5,
+            height: mainBoxHeight,
+            backgroundImage: "url(" + bg_aux.src + ")",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           },
-        }}
-      >
-        <Paper
-          sx={{ backgroundColor: theme.palette.background.paper }}
-          elevation={1}
+        }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            "& > :not(style)": {
+              m: 1,
+              width: mainBoxWidth,
+              height: mainBoxHeight * 0.8,
+              marginTop: mainBoxWidth/100,
+              marginBottom: mainBoxWidth/100
+            },
+          }}
         >
-          <Typography
-            variant="h2"
-            gutterBottom
-            align="center"
-            color={theme.palette.primary.contrastText}
-            style={{ 
-              margin: "45px",
-              color: "black" 
-            }}
+          <Paper
+            sx={{ backgroundColor: "#bed0e6" }}
+            elevation={1}
           >
-            Un Mundo de Posibilidades
-          </Typography>
-          <Grid item xs={12}>
-            <Grid container justifyContent="center" spacing={25}>
-              {[Card1(), Card2()].map((value) => (
-                <Grid item>
-                  <Paper
-                    sx={{
-                      height: mainBoxHeight / 1.5 * 0.8,
-                      width: mainBoxWidth /3.75 ,
-                      backgroundColor: theme.palette.secondary.main,
-                    }} 
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-around",
-                      alignItems: "center"
-                    }}
-                  >{value}</Paper>
-                </Grid>
-              ))}
+            <Typography
+              variant="h2"
+              gutterBottom
+              align="center"
+              color={theme.palette.primary.contrastText}
+              style={{
+                margin: "45px",
+                color: "black"
+              }}
+            >
+              Un Mundo de Posibilidades
+            </Typography>
+            <Grid item xs={12}>
+              <Grid container justifyContent="center" spacing={25}>
+                {[Card1(), Card2()].map((value) => (
+                  <Grid item>
+                    <Paper
+                      sx={{
+                        height: mainBoxHeight / 1.5 * 0.8,
+                        width: mainBoxWidth / 3.75,
+                        backgroundColor: theme.palette.secondary.main
+                      }}
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-around",
+                        alignItems: "center"
+                      }}
+                    >{value}</Paper>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
-          </Grid>
-        </Paper>
+          </Paper>
+        </Box>
       </Box>
-      <br /><br /><br />
+
       <Footer></Footer>
-    </div>  
+    </div>
   );
 }
 

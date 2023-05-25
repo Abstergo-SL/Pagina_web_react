@@ -1,7 +1,7 @@
 import * as React from "react";
 import { darkTheme, lightTheme } from '../utils/Theme';
 import { Box, Paper, Typography, Card, Grid, Button } from "@mui/material";
-import bg from "public/553150.jpg";
+import bg from "public/bg_download.jpg";
 import Footer from "../components/Footer";
 
 
@@ -60,7 +60,7 @@ function download(props:any) {
             alignItems: "center"
           }}>
             <Paper 
-            sx={{ backgroundColor: theme.palette.background.paper }}
+            sx={{ backgroundColor: "#bed0e6" }}
           elevation={1}>
 
               <div
@@ -129,7 +129,7 @@ function download(props:any) {
                 alignItems: "center", 
                 marginBottom: "5%"
               }}>
-              <Button variant="contained">
+              <Button variant="contained" sx={{backgroundColor: "#4997f2"}}>
                 <Typography
                 variant="h6"
                 align="center"

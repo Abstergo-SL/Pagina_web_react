@@ -49,7 +49,7 @@ export function ResponsiveAppBar(props:any) {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" sx={{backgroundColor: "#4997f2"}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           <CameraIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
