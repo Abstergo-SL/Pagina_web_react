@@ -38,7 +38,7 @@ export function ResponsiveAppBar(props:any) {
   const ProfileButtonClick = (e : React.MouseEvent<HTMLElement>) => {
     switch (e.currentTarget.innerText) {
       case "Account":
-        window.location.href = "/perfil";
+        window.location.href = "/login";
       break;
 
       case "Logout":
