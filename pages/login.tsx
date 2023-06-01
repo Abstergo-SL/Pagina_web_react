@@ -30,7 +30,6 @@ function Landing(props: any) {
   React.useEffect(() => {
     document.body.classList?.remove("loading");
     document.title = "Abstergo";
-
     const isDarkMode =
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
