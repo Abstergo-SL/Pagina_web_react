@@ -15,6 +15,7 @@ function download(props:any) {
     document.title = 'Abstergo';
 
     const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
     if (isDarkMode) {
       setTheme(darkTheme);
     } else {
@@ -26,6 +27,17 @@ function download(props:any) {
       SetMainBoxHeight(window.outerHeight / 1.3);
     }
   }, []);
+
+  const handleDownload = () => {
+    const filePath = 'Game_preAlpha.exe';
+
+    const element = document.createElement('a');
+    element.href = filePath;
+    element.download = filePath;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
 
   
   return (
@@ -129,7 +141,8 @@ function download(props:any) {
                 alignItems: "center", 
                 marginBottom: "5%"
               }}>
-              <Button variant="contained" sx={{backgroundColor: "#4997f2"}}>
+              <Button variant="contained" sx={{backgroundColor: "#4997f2"}}
+                      onClick={handleDownload}>
                 <Typography
                 variant="h6"
                 align="center"
