@@ -13,7 +13,9 @@ interface UserData {
   type?: string;
 }
 
-function Landing(props: any) {
+const API_URL = "http://localhost:5000";
+
+function Login(props: any) {
   const [theme, setTheme] = useState(lightTheme);
   const [mainBoxWidth, setMainBoxWidth] = useState(100);
   const [mainBoxHeight, setMainBoxHeight] = useState(100);
@@ -61,7 +63,7 @@ function Landing(props: any) {
     event.preventDefault();
 
     try {
-      const url = isRegistering ? "https://api.example.com/register" : "https://263d-79-116-84-193.ngrok-free.app/login";
+      const url = isRegistering ? API_URL+"/register" : API_URL+"/login";
       const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -75,8 +77,8 @@ function Landing(props: any) {
         throw new Error('Failed to perform the operation');
       }
 
-      console.log("/////////////////////////////////////////////////////////////////////////////")
       // Handle the successful response here
+      console.log("///////////////////////////////////////////////////////////")
 
       setUserData({
         user: "",
@@ -205,4 +207,4 @@ function Landing(props: any) {
   );
 }
 
-export default Landing;
+export default Login;

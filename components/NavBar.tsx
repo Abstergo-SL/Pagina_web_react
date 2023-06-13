@@ -72,7 +72,7 @@ export function ResponsiveAppBar(props:any) {
                 textDecoration: 'none',
               }}
             >
-              ABSTERGO
+              REMEMBERANCE
             </Typography>
           </Button>
           

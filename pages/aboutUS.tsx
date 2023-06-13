@@ -129,7 +129,7 @@ function AboutUs(props: any) {
                                 color: "black"
                             }}
                         >
-                            ¿Qué es Abstergo?
+                            ¿Qué es Rememberance?
                         </Typography>
                         <br />
                         <Typography
@@ -146,11 +146,15 @@ function AboutUs(props: any) {
                             gutterBottom
                             color="black"
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit sed temporibus iusto accusantium expedita rerum quam, illo praesentium aliquid, odio voluptatum hic sequi harum repellat aspernatur eligendi corporis! Quos!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, expedita architecto aliquam impedit rerum ex aspernatur animi, voluptatem eaque dignissimos obcaecati velit placeat minus in eius nesciunt nostrum tempora est.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum quasi adipisci est illum libero in a, officiis, corrupti qui soluta optio officia consequuntur laboriosam animi quas ea esse inventore!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quaerat quasi recusandae placeat quos id excepturi sunt ipsum suscipit soluta optio iusto, eveniet earum! Doloremque odit quos molestiae a necessitatibus!
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sapiente saepe quod debitis eaque unde ut commodi illo quisquam, eligendi, ratione illum? Nulla veniam repudiandae, esse debitis vero quidem ullam?
+                            En la tierra de Yolen, la lucha eterna entre los señores del sol y los señores de la noche había dictado el destino de la humanidad por incontables generaciones. Los grandes señores, cuyo poder era imparable, incluyendo a los señores de las estrellas y al gran señor de la luna, gobernaban sin piedad, imponiendo su voluntad y dictando el destino de todos los reinos de los hombres.
+                            <br /><br />
+                            Sin embargo, había un grupo de guerreros conocidos como los resurgidos libres, que se habían levantado en oposición a los grandes señores. Estos guerreros eran hombres y mujeres que habían perdido sus recuerdos, pero habían encontrado una razón para luchar. Y aunque eran pocos, su determinación y su coraje eran inquebrantables.
+                            En medio de este conflicto, un resurgido elegido fue secuestrado y encarcelado en la cárcel de Manilla, condenado a una muerte segura. Pero gracias a la intervención de otro resurgido libre, que había escapado de esa misma cárcel en el pasado, el prisionero logró escapar y enfrentar al verdugo de Manilla, el resurgido encargado de ejecutar a todos los prisioneros de la cárcel.
+                            La lucha fue intensa, una batalla de poderes y magia que sacudió los cimientos de la cárcel de Manilla. Pero al final, el resurgido elegido emergió victorioso, con el verdugo de Manilla a sus pies. Y así, se unió a la causa de los resurgidos libres, jurando luchar contra los grandes señores y recuperar su verdadero pasado.
+                            <br /><br />
+                            Con el tiempo, el resurgido elegido se convirtió en un guerrero legendario, liderando a los resurgidos libres en la batalla contra los señores del sol y los señores de la noche. Y aunque la lucha fue larga y difícil, y hubo momentos en que todo parecía perdido, finalmente, los resurgidos libres prevalecieron, y los grandes señores fueron derrotados.
+                            La tierra de Chaia cambió para siempre, y aunque la paz aún era frágil, la esperanza volvió a brillar en el corazón de la humanidad. Y se decía que el resurgido elegido, cuyo nombre ya había sido olvidado, había sido el catalizador de ese cambio, el héroe que había llevado a su pueblo hacia un futuro más brillante.
+
                         </Typography>
                         <br />
                         <div
@@ -169,11 +173,11 @@ function AboutUs(props: any) {
                                     marginTop: "30px",
                                     color: "black"
                                 }}>
-                                ¿Aún no eres parte de Abstergo? ¡Únete!
+                                ¿Aún no formas parte? ¡Únete!
                             </Typography>
                             <ButtonGroup size="large" aria-label="large button group">
-                                <Button>Inicia Sesión</Button>
-                                <Button>Regístrate</Button>
+                                <Button href="/login">Inicia Sesión</Button>
+                                <Button href="/login">Regístrate</Button>
                             </ButtonGroup>
                         </div>
                     </Paper>
