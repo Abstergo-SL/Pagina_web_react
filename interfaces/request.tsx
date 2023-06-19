@@ -5,5 +5,5 @@ export interface request{
     endpoint:string;
     method: 'POST' | 'GET' | 'PUT';
     headers: {};
-    body?: string
+    body?: any
 }

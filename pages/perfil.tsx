@@ -27,6 +27,12 @@ const Perfil = (props : any) => {
     }
   }, []);
 
+  const getDatosPerfil = () => {
+    window.localStorage.getItem("token");
+    
+  }
+  
+  
   return (
     <div>
     <Box

@@ -13,13 +13,17 @@ export default async function handler(
   let params = {
     method: request.method,
     headers: request.headers,
-    //body: JSON.stringify(request.body),
+    body: JSON.stringify(request.body),
   }
 
+  console.log(request);
+  
 
   const resp = await fetch(request.baseUrl+request.endpoint, params)
   .then((response) => response.json())
   .then((responseJson) => {
+    console.log(responseJson);
+    
     res.status(200).json(JSON.stringify(responseJson))
   })
   .catch((error) => {

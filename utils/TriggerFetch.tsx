@@ -2,8 +2,10 @@ import { request } from "../interfaces/request";
 
 
 export default async function HttpGet(data:request) {
-    return new Promise((resolve) =>{
-        const resp = fetch("/api/handler", {
+    return new Promise(async (resolve) =>{
+      console.log(data);
+      
+        const resp = await fetch("/api/handler", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
