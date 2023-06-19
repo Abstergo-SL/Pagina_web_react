@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { TextField, Button, Box, Paper, Typography } from "@mui/material";
 import { darkTheme, lightTheme } from "../utils/Theme";
 import bg from "public/bg_perfil.jpg";
-import Footer from "../components/Footer";
-import { resolveHref } from "next/dist/shared/lib/router/router";
 import HttpGet from "../utils/TriggerFetch";
 import { request } from "../interfaces/request";
 import {Md5} from 'ts-md5';
@@ -69,17 +67,8 @@ function Login(props: any) {
 
     try {
       const url = isRegistering ? API_URL+"/register" : API_URL+"/login";
-      // const response = await fetch(url, {
-      //   method: 'POST',
-      //   mode: 'no-cors',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     "ngrok-skip-browser-warning": "69420",
-      //     'Access-Control-Allow-Origin': '*'
-      //   },
-      //   body: JSON.stringify(userData),
-      // });
 
+      console.log("//////////////////")
       console.log(userData);
       
       userData.pass = Md5.hashStr(userData.pass);
@@ -105,8 +94,8 @@ function Login(props: any) {
       
       // Handle the successful response here
       console.log(response)
-
-      window.localStorage.setItem("token", response+"");
+      let resp = response +"";
+      window.localStorage.setItem("token", resp.replaceAll('"', ''));
 
       window.location.href = 'http://localhost:3000/perfil';
 

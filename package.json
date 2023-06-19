@@ -25,6 +25,7 @@
     "aws-amplify": "^5.0.6",
     "eslint-config-next": "13.0.3",
     "fs": "^0.0.1-security",
+    "jose": "^4.14.4",
     "list-files": "^1.1.4",
     "list-react-files": "^0.2.0",
     "mdb-react-ui-kit": "^6.0.0",
