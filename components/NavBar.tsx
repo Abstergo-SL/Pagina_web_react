@@ -14,49 +14,68 @@ import MenuItem from '@mui/material/MenuItem';
 import CameraIcon from '@mui/icons-material/Camera';
 
 const pages = ['Download', 'About us'];
-const settings = ['Account', 'Dashboard', 'Logout'];
+const settings = ['Account', 'Logout'];
 
-export function ResponsiveAppBar() {
+export function ResponsiveAppBar(props:any) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log("handleOpenNavMenu");
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+    console.log("handleOpenUserMenu");
     setAnchorElUser(event.currentTarget);
   };
+  
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (e: React.MouseEvent<HTMLElement>) => {
+    props.datacallback(e.currentTarget.innerText);
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  const ProfileButtonClick = (e : React.MouseEvent<HTMLElement>) => {
+    switch (e.currentTarget.innerText) {
+      case "Account":
+        window.location.href = "/login";
+      break;
+
+      case "Logout":
+        
+      break;
+    }
     setAnchorElUser(null);
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" sx={{backgroundColor: "#4997f2"}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           <CameraIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
+          <Button 
+          sx={{color:"white"}}
+          onClick={()=>{props.datacallback("landing");}}
           >
-            ABSTERGO
-          </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              REMEMBERANCE
+            </Typography>
+          </Button>
+          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -145,10 +164,10 @@ export function ResponsiveAppBar() {
                 horizontal: 'right',
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={ProfileButtonClick}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={ProfileButtonClick}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}

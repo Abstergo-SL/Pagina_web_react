@@ -8,7 +8,12 @@ import { darkTheme, lightTheme } from '../utils/Theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = React.useState<any>(lightTheme);
-  
+  const [currPage, SetCurrPage] = React.useState("landing");
+
+
+  const datacallback = (data:any) => {
+    SetCurrPage(data);
+  }
 
   React.useEffect(() => {
     document.body.classList?.remove('loading');
@@ -23,9 +28,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div className="container" style={{ padding: '50px 0 100px 0', backgroundColor: theme.palette.background.default }}>
-      <ResponsiveAppBar/>
-        <Component {...pageProps} />
+    <div className="container" style={{ padding: '50px 0 0px 0', backgroundColor: theme.palette.background.default }}>
+      <ResponsiveAppBar datacallback={datacallback}/>
+        <Component {...pageProps} currPage={currPage} callback={datacallback} theme={theme}/>
     </div>
   );
 }
