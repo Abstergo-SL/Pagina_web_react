@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CameraIcon from '@mui/icons-material/Camera';
 
 const pages = ['Download', 'About us'];
-const settings = ['Account', 'Logout'];
+const settings = ['Perfil'];
 
 export function ResponsiveAppBar(props:any) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -32,17 +32,18 @@ export function ResponsiveAppBar(props:any) {
 
   const handleCloseNavMenu = (e: React.MouseEvent<HTMLElement>) => {
     props.datacallback(e.currentTarget.innerText);
+    // if(e.currentTarget.innerText=='DOWNLOAD'){
+    //   window.location.href = "/DOWNLOAD";
+    // }else{
+    //   window.location.href = "/AboutUs";
+    // }
     setAnchorElNav(null);
   };
 
   const ProfileButtonClick = (e : React.MouseEvent<HTMLElement>) => {
     switch (e.currentTarget.innerText) {
-      case "Account":
+      case "Perfil":
         window.location.href = "/login";
-      break;
-
-      case "Logout":
-        
       break;
     }
     setAnchorElUser(null);
@@ -55,7 +56,7 @@ export function ResponsiveAppBar(props:any) {
           <CameraIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Button 
           sx={{color:"white"}}
-          onClick={()=>{props.datacallback("landing");}}
+          onClick={()=>{window.location.href = "/main"}}
           >
             <Typography
               variant="h6"
