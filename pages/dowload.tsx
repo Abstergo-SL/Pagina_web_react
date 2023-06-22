@@ -29,7 +29,7 @@ function download(props:any) {
   }, []);
 
   const handleDownload = () => {
-    const filePath = 'Game_preAlpha.exe';
+    const filePath = 'https://installers-rememberance.s3.eu-west-1.amazonaws.com/RememberanceInstaller.exe';
 
     const element = document.createElement('a');
     element.href = filePath;
