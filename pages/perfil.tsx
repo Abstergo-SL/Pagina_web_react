@@ -33,7 +33,7 @@ interface player {
   };
 }
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "http://172.16.51.3:5000";
 
 const Perfil = (props: any) => {
   const [theme, setTheme] = useState(lightTheme);
