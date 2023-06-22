@@ -97,8 +97,6 @@ function Login(props: any) {
       let resp = response +"";
       window.localStorage.setItem("token", resp.replaceAll('"', ''));
 
-      window.location.href = 'http://localhost:3000/perfil';
-
       setUserData({
         user: "",
         pass: "",
@@ -107,6 +105,9 @@ function Login(props: any) {
         lastName: "",
         type: "0"
       });
+      
+      window.location.href = '/perfil';
+
     } catch (error) {
       console.error('Error:', error);
     }
